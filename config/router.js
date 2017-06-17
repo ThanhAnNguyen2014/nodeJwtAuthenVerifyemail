@@ -21,8 +21,6 @@ module.exports = function (app) {
 
     /**Authentication User  */
     function ensureAuthenticatedUser(req, res, callback) {
-        // (req.headers && req.headers.authorization && req.headers.authorizition.split(' ')[0] === 'JWT'
-
         if (req.headers && req.headers.authorization && req.headers.authorization.split(' ')[0] === 'JWT') {
             var token = req.headers.authorization;
             console.log(token.split(' ')[1]);
